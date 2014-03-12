@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html><!--HTML5 doctype-->
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+<script type="text/javascript" language="javascript">
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
+    $.ui.autoLaunch = false;
+    $.ui.useOSThemes = true; //Change this to false to force a device theme
+    $.ui.blockPageScroll();
+    $(document).ready(function () {
+        if ($.ui.useOSThemes && (!$.os.ios||$.os.ios7))
+            $("#afui").removeClass("ios");
+    });
+</script>
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">
+</head>
+
+<div id="afui" class="ios">
+    <div id="header"></div>
+    <div id="content" style="">
+        <div class="panel" title="Main" id="main" selected="selected" style="" data-appbuilder-object="page">
+            <center class="" style=""><a class="button" href="#login" style="position: relative; z-index: 2;"
+                data-appbuilder-object="button" data-transition="slide" id="">Welcome</a>
+            </center>
+            <br>
+            <br>
+            <center>
+                <a href="#login">
+                    <img src="D:E63/Tensa.gif" style="width: 200px; height: 200px;" alt="Title" data-appbuilder-object="image"
+                    class="" title="">
+                </a>
+            </center>
+
+
+        </div>
+        <div class="panel" title="Login" data-nav="nav_0" id="login" data-appbuilder-object="page"
+        style=""><a class="button" href="#" style="position: relative; z-index: 2;" data-appbuilder-object="button"
+            data-transition="slide">Please Login</a>
+            <br>
+            <br>
+
+
+            <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+            data-appbuilder-object="input">
+                <label for="">Username</label>
+                <input type="text" style="float:left;" id="" placeholder="username or email address">
+            </div>
+            <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+            data-appbuilder-object="input">
+                <label for="">Password</label>
+                <input type="password" style="float:left;" id="" placeholder="">
+            </div>
+            <div class="text_item" data-appbuilder-object="text" style="">
+
+                <br><a href="">Forgot your password?</a>
+                <br>
+                <br><a href="#signup">Need to sign up for an account?</a>
+            </div>
+            <div class="checkbox_element form_element" style="width: 100%; overflow: hidden; padding-bottom: 10px;"
+            data-appbuilder-object="checkbox">
+                <label></label>
+                <br>
+                <br>
+                <input type="checkbox" name="checkbox_44703" value="on" id="checkbox_44703_0">
+                <label for="checkbox_44703_0">Keep me logged in on this computer</label>
+            </div>
+            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            id="">Login</a>
+        </div>
+        <div class="panel" title="Sign Up" data-nav="nav_0" id="signup" data-appbuilder-object="page"
+        style="">
+            <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+            data-appbuilder-object="input">
+                <label for="">Nama Lengkap</label>
+                <input type="text" style="float:left;" id="" placeholder="">
+            </div>
+            <div class="input_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="input">
+                <label for="">Username</label>
+                <input type="text" style="float:left;" id="" placeholder="">
+            </div>
+            <div class="input_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="input">
+                <label for="">Email Address</label>
+                <input type="text" style="float:left;" id="" placeholder="">
+            </div>
+            <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+            data-appbuilder-object="input">
+                <label for="">Password</label>
+                <input type="Password" style="float:left;" id="" placeholder="">
+            </div>
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="">Tanggal</label>
+                <select id="">
+                    <option value="Select Box" selected="">---</option>
+                    <option value="Select Box">01</option>
+                    <option value="Select Box">02</option>
+                    <option value="Select Box">03</option>
+                    <option value="Select Box">04</option>
+                    <option value="Select Box">05</option>
+                    <option value="Select Box">06</option>
+                    <option value="Select Box">07</option>
+                    <option value="Select Box">08</option>
+                    <option value="Select Box">09</option>
+                    <option value="Select Box">10</option>
+                    <option value="Select Box">11</option>
+                    <option value="Select Box">12</option>
+                    <option value="Select Box">13</option>
+                    <option value="Select Box">14</option>
+                    <option value="Select Box">15</option>
+                    <option value="Select Box">16</option>
+                    <option value="Select Box">17</option>
+                    <option value="Select Box">18</option>
+                    <option value="Select Box">19</option>
+                    <option value="Select Box">20</option>
+                    <option value="Select Box">21</option>
+                    <option value="Select Box">22</option>
+                    <option value="Select Box">23</option>
+                    <option value="Select Box">24</option>
+                    <option value="Select Box">25</option>
+                    <option value="Select Box">26</option>
+                    <option value="Select Box">27</option>
+                    <option value="Select Box">28</option>
+                    <option value="Select Box">29</option>
+                    <option value="Select Box">30</option>
+                    <option value="Select Box">31</option>
+                </select>
+            </div>
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="">Bulan</label>
+                <select id="">
+                    <option value="Select Box" selected="">---</option>
+                    <option value="Select Box">Januari</option>
+                    <option value="Select Box">Pebruari</option>
+                    <option value="Select Box">Maret</option>
+                    <option value="Select Box">April</option>
+                    <option value="Select Box">Mei</option>
+                    <option value="Select Box">Juni</option>
+                    <option value="Select Box">Juli</option>
+                    <option value="Select Box">Agustus</option>
+                    <option value="Select Box">September</option>
+                    <option value="Select Box">Oktober</option>
+                    <option value="Select Box">Nopember</option>
+                    <option value="Select Box">Desember</option>
+                </select>
+            </div>
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="">Tahun</label>
+                <select id="">
+                    <option value="Select Box" selected="">---</option>
+                    <option value="Select Box">1995</option>
+                    <option value="Select Box">1994</option>
+                    <option value="Select Box">1993</option>
+                    <option value="Select Box">1992</option>
+                    <option value="Select Box">1991</option>
+                    <option value="Select Box">1990</option>
+                    <option value="Select Box">1989</option>
+                    <option value="Select Box">1988</option>
+                    <option value="Select Box">1987</option>
+                    <option value="Select Box">1986</option>
+                    <option value="Select Box">1985</option>
+                    <option value="Select Box">1984</option>
+                    <option value="Select Box">1983</option>
+                    <option value="Select Box">1982</option>
+                    <option value="Select Box">1981</option>
+                    <option value="Select Box">1980</option>
+                    <option value="Select Box">1979</option>
+                    <option value="Select Box">1978</option>
+                    <option value="Select Box">1977</option>
+                    <option value="Select Box">1976</option>
+                    <option value="Select Box">1975</option>
+                    <option value="Select Box">1974</option>
+                    <option value="Select Box">1973</option>
+                    <option value="Select Box">1972</option>
+                    <option value="Select Box">1971</option>
+                    <option value="Select Box">1970</option>
+                </select>
+            </div>
+            <div class="radio_element form_element" style="width:100%;overflow:hidden;padding-bottom:10px"
+            data-appbuilder-object="radio">
+                <label>Jenis Kelamin</label>
+                <input type="radio" name="radio_61262" value="on" id="radio_61262_0">
+                <label for="radio_61262_0">Laki - laki</label>
+                <input type="radio" name="radio_61262" value="on" id="radio_61262_1">
+                <label for="radio_61262_1">Perempuan</label>
+            </div>
+            <div class="checkbox_element form_element" style="width:100%;overflow:hidden;padding-bottom:10px"
+            data-appbuilder-object="checkbox">
+
+
+
+
+
+                <input type="checkbox" name="checkbox_72891" value="on" id="checkbox_72891_0">
+                <label for="checkbox_72891_0">Dengan mengeklik Sign Up, Anda menyetujui <a href="#">Ketentuan</a> kami
+                    dan bahwa Anda telah membaca <a href="#">Kebijakan Penggunaan Data</a>.</label>
+            </div>
+            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            id="">Sign Up</a>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <a href="#main" class="icon home">Home</a>
+    </div>
+    <header id="header_0" data-appbuilder-object="header">
+        <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
+        <h1 id="pageTitle" class="">test</h1> 
+    </header>
+    <nav id="nav_0" data-appbuilder-object="nav">
+        <h1>Side Menu</h1>
+    </nav>
+</div>
+
+
+
+
+
+</html>
